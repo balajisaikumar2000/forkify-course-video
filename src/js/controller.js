@@ -137,6 +137,9 @@ const controlAddRecipe = async function (newRecipe) {
     addRecipeView.renderError(err.message);
   }
 };
+const newFesture = function () {
+  console.log('Welcome to the application');
+};
 const init = function () {
   //NOTE publisher-subscriber pattern
   bookmarksView.addHandleRender(controlBookmarks);
@@ -146,5 +149,6 @@ const init = function () {
   searchView.addHandlerSearch(controlSearchResults);
   paginationView.addHandlerClick(controlPagination);
   addRecipeView.addHandlerUpload(controlAddRecipe);
+  newFesture();
 };
 init();
